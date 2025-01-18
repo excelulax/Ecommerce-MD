@@ -23,6 +23,7 @@ namespace Shipping.Infrastructure
             services.AddScoped<ICommonRepository<Vehicle>, VehicleRepository>();
             services.AddScoped<ICommonRepository<Driver>, DriverRepository>();
             services.AddScoped<ICommonRepository<Order>, OrderRepository>();
+            services.AddScoped<ICommonRepository<Shipment>, ShipmentRepository>();
             return services;
         }
     }
