@@ -13,6 +13,7 @@ namespace Shipping.Application
             services.AddKeyedScoped<ICommonService<VehicleDto, VehicleInsertDto, VehicleUpdateDto>, VehicleService>("VehicleService");
             services.AddKeyedScoped<ICommonService<DriverDto, DriverInsertDto, DriverUpdateDto>, DriverService>("DriverService");
             services.AddKeyedScoped<ICommonService<OrderDto, OrderInsertDto, OrderUpdateDto>, OrderService>("OrderService");
+            services.AddKeyedScoped<ICommonService<ShipmentDto, ShipmentInsertDto, ShipmentUpdateDto>, ShipmentService>("ShipmentService");
             services.AddAutoMapper(typeof(MappingProfile));
             return services;
         }
