@@ -1,0 +1,58 @@
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos de configuración de usuario
+.vs/
+.vscode/
+.idea/
+
+# Archivos de configuración locales de Visual Studio
+.vsconfig
+
+# Archivos de configuración de paquetes NuGet
+packages/
+*.nuget/
+
+# Archivos generados de compilación
+[Dd]ebug/
+[Dd]ebugPublic/
+[Dd]Release/
+[Dd]ReleasePublic/
+
+# Archivos de log
+*.log
+
+# Archivos de dependencias de .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos de configuración de la IDE
+# Visual Studio for Mac
+.vscode/
+
+# Archivos de configuración de macOS
+.DS_Store
+
+# Archivos de configuración de Windows
+Thumbs.db
+
+# Archivos específicos de IIS
+iisexpress/
+
+# Archivos de dependencias de JetBrains Rider
+.idea/
+
+# Archivos generados de dependencias de npm o yarn (si utilizas Node.js en tu proyecto)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Archivos de sistema de otros entornos
+*.swp
+*~.nfs*
+
+# Archivos de backup de editor
+*.bak
+*.tmp

@@ -1,0 +1,6 @@
+@Shipping.WebApi_HostAddress = http://localhost:5286
+
+GET {{Shipping.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
