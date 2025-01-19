@@ -1,0 +1,11 @@
+﻿using Shipping.Domain.Entities;
+
+namespace Shipping.Application.DTOs
+{
+    public class ShipmentTypeUpdateDto
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
+}

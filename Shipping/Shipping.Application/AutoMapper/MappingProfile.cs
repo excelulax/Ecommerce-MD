@@ -20,23 +20,10 @@ namespace Shipping.Application.AutoMapper
             CreateMap<OrderDto, Order>().ReverseMap();
             CreateMap<OrderInsertDto, Order>().ReverseMap();
             CreateMap<OrderUpdateDto, Order>().ReverseMap();
-            CreateMap<OrderUpdateDto, Order>().ReverseMap();
 
-            //CreateMap<ShipmentDto, Shipment>().ReverseMap()
-            //    .ForMember(dto => dto.OriginLocationLatitude, ent => ent.MapFrom(prop => prop.OriginLocation.Y))
-            //    .ForMember(dto => dto.OriginLocationLongitude, ent => ent.MapFrom(prop => prop.OriginLocation.X))
-            //    .ForMember(dto => dto.DestinationLocationLatitude, ent => ent.MapFrom(prop => prop.DestinationLocation.Y))
-            //    .ForMember(dto => dto.DestinationLocationLongitude, ent => ent.MapFrom(prop => prop.DestinationLocation.X));
-            //CreateMap<ShipmentInsertDto, Shipment>().ReverseMap()
-            //    .ForMember(dto => dto.OriginLocationLatitude, ent => ent.MapFrom(prop => prop.OriginLocation.Y))
-            //    .ForMember(dto => dto.OriginLocationLongitude, ent => ent.MapFrom(prop => prop.OriginLocation.X))
-            //    .ForMember(dto => dto.DestinationLocationLatitude, ent => ent.MapFrom(prop => prop.DestinationLocation.Y))
-            //    .ForMember(dto => dto.DestinationLocationLongitude, ent => ent.MapFrom(prop => prop.DestinationLocation.X));
-            //CreateMap<ShipmentUpdateDto, Shipment>().ReverseMap()
-            //    .ForMember(dto => dto.OriginLocationLatitude, ent => ent.MapFrom(prop => prop.OriginLocation.Y))
-            //    .ForMember(dto => dto.OriginLocationLongitude, ent => ent.MapFrom(prop => prop.OriginLocation.X))
-            //    .ForMember(dto => dto.DestinationLocationLatitude, ent => ent.MapFrom(prop => prop.DestinationLocation.Y))
-            //    .ForMember(dto => dto.DestinationLocationLongitude, ent => ent.MapFrom(prop => prop.DestinationLocation.X));
+            CreateMap<ShipmentTypeDto, ShipmentType>().ReverseMap();
+            CreateMap<ShipmentTypeInsertDto, ShipmentType>().ReverseMap();
+            CreateMap<ShipmentTypeUpdateDto, ShipmentType>().ReverseMap();
 
             CreateMap<ShipmentDto, Shipment>()
                 .ForMember(ent => ent.OriginLocation, opt => opt.MapFrom(dto => new Point(dto.OriginLocationLongitude, dto.OriginLocationLatitude) { SRID = 4326 }))

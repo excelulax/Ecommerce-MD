@@ -24,6 +24,7 @@ namespace Shipping.Infrastructure
             services.AddScoped<ICommonRepository<Driver>, DriverRepository>();
             services.AddScoped<ICommonRepository<Order>, OrderRepository>();
             services.AddScoped<ICommonRepository<Shipment>, ShipmentRepository>();
+            services.AddScoped<ICommonRepository<ShipmentType>, ShipmentTypeRepository>();
             return services;
         }
     }

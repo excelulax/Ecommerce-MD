@@ -57,28 +57,5 @@ namespace Shipping.Application.Services
             }
             return null;
         }
-
-        //public bool IsLocationWithinRange(DistanceVerificationDTO distanceVerificationDTO)
-        //{
-        //    var geometryFactory = NtsGeometryServices.Instance.CreateGeometryFactory(srid: 4326);
-
-        //    double centerLongitude = -64.734827;
-        //    double centerLatitude = -21.531269;
-
-        //    var centerPoint = geometryFactory.CreatePoint(new Coordinate(centerLongitude, centerLatitude));
-
-        //    var originPoint = geometryFactory
-        //        .CreatePoint(new Coordinate(distanceVerificationDTO.OriginLongitude, distanceVerificationDTO.OriginLatitude));
-
-        //    var destinationPoint = geometryFactory
-        //        .CreatePoint(new Coordinate(distanceVerificationDTO.DestinationLongitude, distanceVerificationDTO.DestinationLatitude));
-
-        //    var maxDistance = 1000;
-
-        //    var originDistance = centerPoint.IsWithinDistance(originPoint, maxDistance);
-        //    var destinationDistance = centerPoint.IsWithinDistance(destinationPoint, maxDistance);
-
-        //    return (originDistance && destinationDistance);
-        //}
     }
 }
