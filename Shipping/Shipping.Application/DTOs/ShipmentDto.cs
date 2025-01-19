@@ -14,5 +14,8 @@
         public DateTime? DeliveryDate { get; set; }
         public string Status { get; set; }
         public decimal ShippingCost { get; set; }
+        public string OriginName { get; set; }
+        public string DestinationName { get; set; }
+        public string TransportedGoods { get; set; }
     }
 }
