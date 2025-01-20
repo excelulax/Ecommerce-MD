@@ -2,6 +2,7 @@
 using Shipping.Application.DTOs;
 using Shipping.Application.DTOs.Tracking;
 using Shipping.Application.Services;
+using Shipping.Infrastructure.Gateway;
 
 namespace Shipping.WebApi.Controllers
 {
@@ -10,10 +11,12 @@ namespace Shipping.WebApi.Controllers
     public class TrackingController : ControllerBase
     {
         private readonly TrackingService _service;
+        private readonly IdentityService _identityService;
 
-        public TrackingController(TrackingService service)
+        public TrackingController(TrackingService service, IdentityService identityService)
         {
             _service = service;
+            _identityService = identityService;
         }
 
         [HttpPost("CheckLocation")]
@@ -21,6 +24,13 @@ namespace Shipping.WebApi.Controllers
         {
             var response = _service.VerifyLocation(dto);
             return Ok(response);
+        }
+
+        [HttpPost("/login")]
+        public async Task<ActionResult> Test(Request request)
+        {
+            var resul = await _identityService.PostRequestAsync(request);
+            return Ok(resul);
         }
     }
 }

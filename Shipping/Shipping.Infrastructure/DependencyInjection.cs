@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Shipping.Domain.Contracts;
 using Shipping.Domain.Entities;
 using Shipping.Infrastructure.Context;
+using Shipping.Infrastructure.Gateway;
 using Shipping.Infrastructure.Repositories;
 
 namespace Shipping.Infrastructure
@@ -25,6 +26,7 @@ namespace Shipping.Infrastructure
             services.AddScoped<ICommonRepository<Order>, OrderRepository>();
             services.AddScoped<ICommonRepository<Shipment>, ShipmentRepository>();
             services.AddScoped<ICommonRepository<ShipmentType>, ShipmentTypeRepository>();
+            services.AddScoped<IdentityService>();
             return services;
         }
     }
