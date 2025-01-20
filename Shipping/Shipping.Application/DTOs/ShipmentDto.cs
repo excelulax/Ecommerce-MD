@@ -6,6 +6,7 @@
         public Guid OrderId { get; set; }
         public Guid DriverId { get; set; }
         public Guid VehicleId { get; set; }
+        public Guid ShipmentTypeId { get; set; }
         public double OriginLocationLatitude { get; set; }
         public double OriginLocationLongitude { get; set; }
         public double DestinationLocationLatitude { get; set; }
